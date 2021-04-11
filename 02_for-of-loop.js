@@ -1,4 +1,11 @@
-import { clean } from './clean.js';
+'use strict';
+
+
+const clean = (str) => {
+  var re = /[^A-Za-z0-9]/g;
+  str = str.toLowerCase().replace(re, '');
+  return str;
+};
 
 const isPalindrome = (str) => {
   const cleanStr = clean(str);
